@@ -1,7 +1,11 @@
 function sumArray(array) {
     if (array === null) return 0;
+
+    // *sol one More accurate
+
     return array.sort((a,b)=> a-b).slice(1,-1).reduce((acc,cur) => acc+cur,0);
     
+    // *sol two
     /* var maxValue = Math.max(...array); 
     var minValue = Math.min(...array); 
     var sum = 0;
@@ -14,6 +18,7 @@ function sumArray(array) {
     }
     // return newArray;
     return sum; */
+    // *sol three
 
     /* var filterArray = array.filter((x) => x !== maxValue && x !== minValue);
     var newArray =filterArray.reduce((acc,cur) => acc +cur,0);
