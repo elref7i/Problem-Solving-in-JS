@@ -17,8 +17,17 @@ Hint: Don't forget to check for bad values like null/undefined
  */
 function countSheeps(sheep) {
     // TODO
-    // *sol one
-   /*  var c= 0;
+    // * use count with sol one and two only
+    var c= 0;
+    // * sol one
+
+    sheep.map((x)=> {
+        if (x===true)c++
+    });
+    return c;
+    // *sol Two
+
+   /*  
     for ( var i =0;i<sheep.length;i++){
         if(Boolean(sheep[i])){
             c +=1;
@@ -26,10 +35,17 @@ function countSheeps(sheep) {
     }
     return c; 
     */
-    // *sol Two
+    // *sol Three
     /* return sheep.map(Boolean).filter((x)=>x===true).length; */
 }
 
 //^ Write anything
-console.log(countSheeps(["ahmed","khaled",'',"refai","ali","","magde",null,0]));
+console.log(countSheeps([true,  true,  true,  false,
+    true,  true,  true,  true ,
+    true,  false, true,  false,
+    true,  false, false, true ,
+    true,  true,  true,  true ,
+    false, false, true,  true]));
+//* log use sol two or three
+// console.log(countSheeps(["ahmed","khaled",'',"refai","ali","","magde",null,0]));
 
