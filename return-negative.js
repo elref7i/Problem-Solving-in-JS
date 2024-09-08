@@ -14,9 +14,12 @@ Zero (0) is not checked for any specific sign. Negative zeros make no mathematic
 !!!
  */
 function makeNegative(num) {
-    if (num > 0){
+    // *sol one
+    /* if (num > 0){
         return -num;
     }
-    return num;
+    return num; */
+    // * sol two
+    return num > 0? -num : num ;
 }
-console.log(makeNegative(0));
+console.log(makeNegative(5));
