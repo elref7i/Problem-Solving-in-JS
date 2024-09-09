@@ -1,10 +1,11 @@
 function countPositivesSumNegatives(input) {
     let sum=0;
     let count=0;
-    if(input.length === 0){
-        return null;
-    }
+  
     for (let i =0 ;i<input.length;i++){
+        if(input.length === 0){
+            return null;
+        }
         if(input[i] >=0){
             count ++;
         }
